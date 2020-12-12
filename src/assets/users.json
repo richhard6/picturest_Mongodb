@@ -6,7 +6,8 @@
     "email": "cloughrey0@mozilla.org",
     "avatar": "https://robohash.org/consecteturnobisdolores.bmp?size=50x50&set=set1",
     "password": "81DvRN",
-    "following": []
+    "username": "johnDoe",
+    "following": [2, 3]
   },
   {
     "id": 2,
@@ -14,6 +15,7 @@
     "lastName": "Pales",
     "email": "mpales1@auda.org.au",
     "password": "LJbrpySNi7",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -22,6 +24,7 @@
     "lastName": "Rothert",
     "email": "trothert2@marketwatch.com",
     "password": "uegwgfc0Tv8",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -31,6 +34,7 @@
     "email": "kmarling3@360.cn",
     "avatar": "https://robohash.org/consequaturquieveniet.png?size=50x50&set=set1",
     "password": "x1K222B5um",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -39,6 +43,7 @@
     "lastName": "Strangward",
     "email": "cstrangward4@nbcnews.com",
     "password": "WbWMpcHURU",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -47,6 +52,7 @@
     "lastName": "McGrale",
     "email": "lmcgrale5@com.com",
     "password": "3WUGGNVi",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -55,6 +61,7 @@
     "lastName": "Scorah",
     "email": "lscorah6@howstuffworks.com",
     "password": "ST7NLy",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -64,6 +71,7 @@
     "email": "vdallinder7@tamu.edu",
     "avatar": "https://robohash.org/quihicsaepe.jpg?size=50x50&set=set1",
     "password": "G8ergF",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -72,6 +80,7 @@
     "lastName": "Huguet",
     "email": "lhuguet8@mit.edu",
     "password": "xzDUzoj",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -81,6 +90,7 @@
     "email": "mdanko9@cbc.ca",
     "avatar": "https://robohash.org/nesciuntestrem.png?size=50x50&set=set1",
     "password": "OEuEscs",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -89,6 +99,7 @@
     "lastName": "Jobbing",
     "email": "rjobbinga@theatlantic.com",
     "password": "a41YUJ4e",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -97,6 +108,7 @@
     "lastName": "Frank",
     "email": "jfrankb@pcworld.com",
     "password": "SAIFl4DVmQU2",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -106,6 +118,7 @@
     "email": "htrahmelc@vk.com",
     "avatar": "https://robohash.org/hicsitet.bmp?size=50x50&set=set1",
     "password": "O3j0GpCT7",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -114,6 +127,7 @@
     "lastName": "Panton",
     "email": "wpantond@sciencedirect.com",
     "password": "PER0HD",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -122,6 +136,7 @@
     "lastName": "Merry",
     "email": "cmerrye@nature.com",
     "password": "DRI0n6",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -131,6 +146,7 @@
     "email": "msanchezf@vkontakte.ru",
     "avatar": "https://robohash.org/eligendieumeaque.jpg?size=50x50&set=set1",
     "password": "QkoO2kiYa",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -140,6 +156,7 @@
     "email": "echidlowg@noaa.gov",
     "avatar": "https://robohash.org/eumevenietnobis.bmp?size=50x50&set=set1",
     "password": "6URz2mr",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -148,6 +165,7 @@
     "lastName": "Delve",
     "email": "mdelveh@hp.com",
     "password": "hxQqbiqa",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -156,6 +174,7 @@
     "lastName": "Warland",
     "email": "swarlandi@histats.com",
     "password": "eJcf9NrKe",
+    "username": "johnDoe",
     "following": []
   },
   {
@@ -164,6 +183,7 @@
     "lastName": "Achromov",
     "email": "sachromovj@nasa.gov",
     "password": "5AgZXNFKFcK",
+    "username": "johnDoe",
     "following": []
   }
 ]
