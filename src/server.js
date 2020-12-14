@@ -9,6 +9,7 @@ const usersRouter = require('./resources/users/users.router');
 const boardsRouter = require('./resources/boards/boards.router');
 const jwt = require('express-jwt');
 const dotenv = require("dotenv");
+const mongo = require("./config/mongo");
 
 dotenv.config();
 const app = express();
