@@ -8,7 +8,7 @@ router.route('/').get(usersController.getAll).post(usersController.create);
 router
   .route('/:id')
   .get(usersController.getOne)
-  .put(usersController.update)
+  .patch(usersController.update)
   .delete(usersController.remove);
 
 router.route('/:userId/boards').get(boardsController.getAllOfUser);

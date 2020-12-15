@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Define model schema
 const userModelSchema = mongoose.Schema({
-  id: String,
+  id: Number,
   firstName: String,
   lastName: String,
   email: String,
@@ -13,28 +13,61 @@ const userModelSchema = mongoose.Schema({
 });
 
 // Compile model from schema
-const UserModel = mongoose.model('UserModel', userModelSchema );
+const User = mongoose.model('UserModel', userModelSchema );
 
 const create = (user) => {
-    UserModel.create(user, function (err, instance) {
-        if (err) return handleError(err);
-        if (instance) {
-            console.log(instance.name);
-        }
-      });
+  User.create(user, function (err, docs) {
+    if (err){ 
+      console.log(err) 
+    }
+    else{ 
+      console.log("Created Docs : ", docs); 
+    }
+  });
 };
 
-const get = (id) => {
-    return UserModel
-      .findOne({ "id": parseInt(id) })
-      .exec(function (err, user) {
-        if (err) return console.log(err);
-        console.log('The user is %s', user);
-        return user;
-      });
+const get = async(id) => {
+  let query = { 'id': id };
+  return await User.findOne(query);
+};
+
+const all = async() => {
+  return await User.find();
 }
+
+const remove = (id) => {
+  let query = { 'id': id };
+  User.deleteOne(
+    query,
+    function (err, docs) { 
+      if (err){ 
+        console.log(err) 
+      }
+      else{ 
+        console.log("Deleted Doc : ", docs);
+      }
+  }); 
+};
+
+const update = (id, updateduser) => {
+  let query = { 'id': id };
+  User.updateOne(
+    query,
+    updateduser, 
+    function (err, docs) { 
+      if (err){ 
+        console.log(err) 
+      }
+      else{ 
+        console.log("Updated Docs : ", docs); 
+      }
+  }); 
+};
 
 module.exports = {
     create,
-    get
+    update,
+    remove,
+    get,
+    all
   };
