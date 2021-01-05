@@ -7,7 +7,7 @@ router.route('/').get(boardsController.getAll).post(boardsController.create);
 router
   .route('/:id')
   .get(boardsController.getOne)
-  .put(boardsController.update)
+  .patch(boardsController.update)
   .delete(boardsController.remove);
 
 module.exports = router;

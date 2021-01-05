@@ -7,7 +7,7 @@ router.route('/').get(pinsController.getAll).post(pinsController.create);
 router
   .route('/:id')
   .get(pinsController.getOne)
-  .put(pinsController.update)
+  .patch(pinsController.update)
   .delete(pinsController.remove);
 
 module.exports = router;
