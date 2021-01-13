@@ -52,6 +52,12 @@ const remove = (req, res) => {
   return res.status(200).json(pinsWithoutTheDeleted);
 };
 
+const getPinsOfBoard = async (req, res) => {
+  const boardId = req.params.boardId;
+  const filteredPins = await pinModel.getByBoard(boardId);
+  return res.status(200).json(filteredPins);
+};
+
 module.exports = {
   create,
   update,
@@ -59,4 +65,5 @@ module.exports = {
   getAllOfUser,
   getOne,
   remove,
+  getPinsOfBoard,
 };

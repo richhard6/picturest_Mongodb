@@ -65,6 +65,11 @@ const getByAuthor = async (author) => {
   return await Pin.find(query);
 };
 
+const getByBoard = async (board) => {
+  let query = { board: board };
+  return await Pin.find(query);
+};
+
 module.exports = {
   create,
   update,
@@ -72,4 +77,5 @@ module.exports = {
   get,
   all,
   getByAuthor,
+  getByBoard,
 };
