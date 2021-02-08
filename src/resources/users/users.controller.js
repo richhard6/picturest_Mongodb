@@ -1,6 +1,8 @@
 const persimon = require('../../utils/persimon');
 const db = persimon('/assets/users.json'); // Relative to the project root
 
+const { validationResult } = require('express-validator');
+
 const userModel = require('./users.model');
 
 const getAll = async (req, res) => {
@@ -19,6 +21,11 @@ const getOne = async (req, res) => {
 
 const create = (req, res) => {
   const newuser = req.body;
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    console.log(errors);
+    return res.status(400).json({ errors: errors.array() });
+  }
   const usersUpdated = userModel.create(newuser);
   return res.status(201).json(usersUpdated);
 };
