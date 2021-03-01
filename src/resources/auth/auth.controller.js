@@ -6,20 +6,20 @@ const userModel = require('../users/users.model');
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-  console.log(req.body); //me devueleve perfectamente lo que le mando como request, pero nunca encuentra
   const user = await userModel.getByEmail(email);
   if (user.password === password) {
     const token = jwt.sign(
       { email: email, role: 'admin' },
       process.env.TOKEN_SECRET
     );
-    res.json({ token: token, user: user });
+    res.json(token);
   } else {
     res.status(401).send('Username or password incorrect');
   }
 };
 
 const login2 = async (req, res) => {
+  //con la encriptacion de password Vease: usermodel, no funciona el test de Login ni el de getAll. ??
   const { email, password } = req.body;
 
   try {

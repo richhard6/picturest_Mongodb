@@ -8,8 +8,7 @@ const pinsRouter = require('./resources/pins/pins.router');
 const usersRouter = require('./resources/users/users.router');
 const boardsRouter = require('./resources/boards/boards.router');
 const jwt = require('express-jwt');
-const dotenv = require("dotenv");
-const mongo = require("./config/mongo");
+const dotenv = require('dotenv');
 
 dotenv.config();
 const app = express();
@@ -25,9 +24,17 @@ app.use('/api/pins', pinsRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/boards', boardsRouter);
 
-app.get('/protected', jwt( { secret: process.env.TOKEN_SECRET, algorithms: ['HS256'] } ), (req, res) => {
-  res.send('protected');
+app.use('/healthcheck', (req, res) => {
+  return res.status(200).json({ message: 'K' });
 });
+
+app.get(
+  '/protected',
+  jwt({ secret: process.env.TOKEN_SECRET, algorithms: ['HS256'] }),
+  (req, res) => {
+    res.send('protected');
+  }
+);
 
 const start = async () => {
   try {

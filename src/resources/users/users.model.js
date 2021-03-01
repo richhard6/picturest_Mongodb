@@ -13,12 +13,12 @@ const userModelSchema = mongoose.Schema({
   following: Array,
 });
 
-userModelSchema.pre('save', async function (next) {
-  //antes de cada save, se ejecuta esto, ,por esto el pre.
-  const salt = await bcrypt.genSalt();
-  this.password = await bcrypt.hash(this.password, salt);
-  next();
-});
+// userModelSchema.pre('save', async function (next) {
+//   //antes de cada save, se ejecuta esto, ,por esto el pre.
+//   const salt = await bcrypt.genSalt();
+//   this.password = await bcrypt.hash(this.password, salt);
+//   next();
+// });
 
 // Compile model from schema
 const User = mongoose.model('UserModel', userModelSchema);
